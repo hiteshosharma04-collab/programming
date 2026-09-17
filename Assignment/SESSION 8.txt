@@ -1,0 +1,19 @@
+Function
+the defination conatins the actual block of code that executes when the function is called
+example 
+int add(int a, int b)
+{
+a+b;
+}
+
+function calling 
+calling a function means invoking or executing it from another part of the program 
+like the main() function by passing the required arguments
+
+pass by value vs pass by refrence 
+
+* pass by value : A copy of the actual value is passed to the function.
+chnges made to the parameter inside the function do not affect the acutal variable
+
+*pass by refrences: The memory address of the variable is passed to the function.
+changes made inside the function will directly affect the actual value
