@@ -1,0 +1,9 @@
+Day 1: 1.00 hours
+Day 2: 2.00 hours
+Day 3: 2.00 hours
+Day 4: 5.00 hours
+Day 5: 5.00 hours
+Day 6: 5.00 hours
+Day 7: 5.00 hours
+Total: 25.00 hours
+Average: 3.57 hours/day
