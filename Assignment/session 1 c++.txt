@@ -1,0 +1,85 @@
+// task 1 
+#include <iostream>
+using namespace std;
+
+int main() {
+    string tasks[5] = {"Study", "Coding", "Homework"};
+
+    for(int i=0; i<3; i++)
+        cout << tasks[i] << endl;
+
+}
+
+// task 2
+#include <iostream>
+using namespace std;
+
+string tasks[2] = {"Study", "Coding"};
+
+void markTaskDone(int i) {
+    tasks[i] += " - DONE";
+}
+
+int main() 
+{
+    markTaskDone(0);
+    for(int i=0; i<2; i++)
+        cout << tasks[i] << endl;
+}
+
+//  task 3
+#include <iostream>
+using namespace std;
+
+class Task {
+public:
+    string title;
+    bool isDone = false;
+
+    Task(string t) { title = t; }
+
+    void markDone() { isDone = true; }
+
+    void display() {
+        cout << title << " " << (isDone ? "DONE" : "PENDING");
+    }
+};
+
+int main() {
+    Task t("Study");
+    t.markDone();
+    t.display();
+}
+
+
+// task 4
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class TaskList {
+    vector<string> tasks;
+public:
+    void addTask(string t) { tasks.push_back(t); }
+
+    void showTasks() {
+        for(auto t : tasks) cout << t << endl;
+    }
+};
+
+int main() {
+    TaskList l;
+    l.addTask("Study");
+    l.addTask("Coding");
+    l.showTasks();
+}
+
+
+// task 5
+Three Differences Between C and OOP
+
+1.C uses functions; OOP uses classes and objects.
+
+2.C often uses global data; OOP supports data encapsulation.
+
+3.OOP makes code reuse and maintenance easier
