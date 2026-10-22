@@ -21,13 +21,13 @@ public:
 vector<Content> readFromFile() {
     vector<Content> list;
     ifstream file("content_list.txt");
-    if (!file) return list; // ??? ????? ???? ?? ?? ???? ????? ?????
+    if (!file) return list; 
 
     Content temp;
     while (getline(file, temp.title)) {
         getline(file, temp.platform);
         file >> temp.views;
-        file.ignore(); // newline ???????? ?? ????? ?? ???
+        file.ignore(); 
         getline(file, temp.status);
         list.push_back(temp);
     }
@@ -112,27 +112,26 @@ void deleteContent() {
         return;
     }
 
-    viewContentList(); // ???? ????? ??????
+    viewContentList();
     int index;
     cout << "\nEnter the number to delete: ";
     cin >> index;
 
     if (index > 0 && index <= list.size()) {
-        list.erase(list.begin() + (index - 1)); // ????? ?? ???? ?????
+        list.erase(list.begin() + (index - 1)); 
 
-        writeToFile(list); // ????? ????? ????
+        writeToFile(list); 
         cout << "\nContent deleted successfully! Updated List:\n";
-        viewContentList(); // ????? ???? ?? ?????? ?? ??? ??????? ????? ??????
+        viewContentList(); 
     } else {
         cout << "Invalid number!\n";
     }
 }
 
-// ================= CONSOLE MENU =================
 int main() {
     int choice;
     do {
-        cout << "\n===== CREATOR DASHBOARD LITE =====";
+        cout << "\n CREATOR DASHBOARD LITE ";
         cout << "\n1. Add Content Idea";
         cout << "\n2. View Content List";
         cout << "\n3. Update Content Status";
